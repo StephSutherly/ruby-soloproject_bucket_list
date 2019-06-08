@@ -52,8 +52,16 @@ attr_accessor :name, :visits_to_country, :has_visited_country
     SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = 'SELECT * FROM countries WHERE id = $1'
+    values = [id]
+    country = SqlRunner.run(sql, values)
+    result = Country.new(country.first)
+    return result
+  end
+  
   def self.all
-    sql = "SELECT * FROM countries"
+    sql = 'SELECT * FROM countries'
     countries = SqlRunner.run(sql)
     return Country.map_items(countries)
   end
@@ -64,7 +72,7 @@ attr_accessor :name, :visits_to_country, :has_visited_country
   end
 
   def self.delete_all()
-    sql = "DELETE FROM countries;"
+    sql = 'DELETE FROM countries'
     SqlRunner.run(sql)
   end
 

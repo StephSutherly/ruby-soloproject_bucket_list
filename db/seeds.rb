@@ -12,9 +12,16 @@ country1 = Country.new({
   "has_visited_country" => "true"
   })
 
+country2 = Country.new({
+  "name" => "France",
+  "visits_to_country" => "3",
+  "has_visited_country" => "true"
+  })
+
 #instance.save
 
 country1.save
+country2.save
 
 binding.pry
 nil
