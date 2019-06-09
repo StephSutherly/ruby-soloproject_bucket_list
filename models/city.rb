@@ -31,6 +31,13 @@ attr_accessor :name, :visits_to_city, :has_visited_city, :country_id
     @id = results.first()['id'].to_i
   end
 
+  def delete()
+    sql = 'DELETE FROM cities
+    WHERE id = $1'
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all
     sql = "SELECT * FROM cities"
     cities = SqlRunner.run(sql)
@@ -46,5 +53,5 @@ attr_accessor :name, :visits_to_city, :has_visited_city, :country_id
     sql = "DELETE FROM cities;"
     SqlRunner.run(sql)
   end
-  
+
 end
