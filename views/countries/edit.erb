@@ -1,0 +1,14 @@
+<h1>Edit --<%= @country.name %>-- </h1>
+
+<form action="/countries/<%@country.id%>" method="post">
+
+  <label for="name">Country:</label>
+    <input type="text" value="<%=@country.name%>" name="name" id="name">
+    <br>
+
+  <label for="visits_to_country">Times I have been here so far:</label>
+    <input type="number" value="<%=@country.visits_to_country%>"  name="visits_to_country" id="visits_to_country">
+
+<!--Can I add a self entering label here to enter boolean? I.e. if visits to country = more than 0, has_visited_country = true  -->
+    <input type="submit" value="Update Country">
+</form>

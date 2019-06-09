@@ -1,11 +1,13 @@
-<h2>Add a new country</h2>
+<h1>Add a new country</h1>
 <form action="/countries" method="post">
 
   <label for="name">Country:</label>
     <input type="text" name="name" id="name">
     <br>
+
   <label for="visits_to_country">Times I have been here so far:</label>
     <input type="number" name="visits_to_country" id="visits_to_country">
 
+<!--Can I add a self entering label here to enter boolean? I.e. if visits to country = more than 0, has_visited_country = true  -->
     <input type="submit" value="Submit">
 </form>
