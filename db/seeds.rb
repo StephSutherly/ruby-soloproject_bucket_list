@@ -2,6 +2,7 @@ require("pry-byebug")
 require_relative( "../models/country.rb" )
 require_relative( "../models/city.rb" )
 
+City.delete_all
 Country.delete_all
 
 country1 = Country.new({

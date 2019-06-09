@@ -31,5 +31,20 @@ attr_accessor :name, :visits_to_city, :has_visited_city, :country_id
     @id = results.first()['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM cities"
+    cities = SqlRunner.run(sql)
+    return City.map_items(cities)
+  end
 
+  def self.map_items(city_data)
+    result = city_data.map { |city| City.new(city) }
+    return result
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM cities;"
+    SqlRunner.run(sql)
+  end
+  
 end
