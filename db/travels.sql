@@ -1,4 +1,3 @@
--- DROP sights & types
 DROP TABLE cities;
 DROP TABLE countries;
 
@@ -19,5 +18,3 @@ CREATE TABLE cities
   has_visited_city BOOLEAN,
   country_id INT8 REFERENCES countries(id)
 );
-
--- CREATE sights & types

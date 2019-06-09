@@ -3,7 +3,7 @@ require_relative( "../models/country.rb" )
 # require_relative( "../models/city.rb" )
 
 #This is where I will seed data into my database.
-#Class.delete_all
+Country.delete_all
 
 #instantiate class
 country1 = Country.new({
