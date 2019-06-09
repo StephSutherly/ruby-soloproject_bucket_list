@@ -29,6 +29,20 @@ attr_accessor :name, :city_id, :review
     @id = results.first()['id'].to_i
   end
 
+  def update()
+    sql = 'UPDATE attractions SET (
+    name,
+    city_id,
+    review
+    ) =
+    (
+    $1, $2, $3
+    )
+    WHERE id = $4'
+    values = [@name, @city_id, @review, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all
     sql = "SELECT * FROM attractions"
     attractions = SqlRunner.run(sql)
