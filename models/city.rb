@@ -40,6 +40,13 @@ attr_accessor :name, :visits_to_city, :has_visited_city, :country_id
     return country
   end
 
+  def attractions()
+    sql = 'SELECT * FROM attractions WHERE city_id = $1'
+    values = [@id]
+    attractions = SqlRunner.run(sql, values)
+    return Attraction.map_items(attractions)
+  end
+
   def update()
     sql = 'UPDATE cities SET (
     name,
