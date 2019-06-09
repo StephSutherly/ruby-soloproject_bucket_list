@@ -31,6 +31,15 @@ attr_accessor :name, :visits_to_city, :has_visited_city, :country_id
     @id = results.first()['id'].to_i
   end
 
+  def country()
+    sql = 'SELECT * FROM countries WHERE id = $1'
+    values = [@country_id]
+    results = SqlRunner.run(sql, values)
+    country_data = results[0]
+    country = Country.new(country_data)
+    return country
+  end
+
   def update()
     sql = 'UPDATE cities SET (
     name,
@@ -60,7 +69,7 @@ attr_accessor :name, :visits_to_city, :has_visited_city, :country_id
     city = SqlRunner.run(sql, values)
     result = City.new(city.first)
     return result
-  end 
+  end
 
   def self.all
     sql = "SELECT * FROM cities"
