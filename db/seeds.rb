@@ -1,11 +1,9 @@
 require("pry-byebug")
 require_relative( "../models/country.rb" )
-# require_relative( "../models/city.rb" )
+require_relative( "../models/city.rb" )
 
-#This is where I will seed data into my database.
 Country.delete_all
 
-#instantiate class
 country1 = Country.new({
   "name" => "South Africa",
   "visits_to_country" => "7",
@@ -18,10 +16,33 @@ country2 = Country.new({
   "has_visited_country" => "true"
   })
 
-#instance.save
-
 country1.save
 country2.save
+
+ city1 = City.new({
+   "name" => "Nantes",
+   "visits_to_city" => "1",
+   "has_visited_city" => "true",
+   "country_id" => country2.id
+   })
+
+ city2 = City.new({
+   "name" => "Paris",
+   "visits_to_city" => "3",
+   "has_visited_city" => "true",
+   "country_id" => country2.id
+   })
+
+ city3 = City.new({
+   "name" => "Johannesburg",
+   "visits_to_city" => "15",
+   "has_visited_city" => "true",
+   "country_id" => country1.id
+   })
+
+city1.save
+city2.save
+city3.save
 
 binding.pry
 nil

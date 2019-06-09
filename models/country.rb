@@ -59,7 +59,7 @@ attr_accessor :name, :visits_to_country, :has_visited_country
     result = Country.new(country.first)
     return result
   end
-  
+
   def self.all
     sql = 'SELECT * FROM countries'
     countries = SqlRunner.run(sql)

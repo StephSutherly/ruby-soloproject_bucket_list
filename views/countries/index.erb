@@ -1,1 +1,9 @@
 <h1>Counties I've Visited!</h1>
+
+<%# Below code is not yet working on host: %>
+
+<% for country in @countries %>
+  <p>I have visited <%=country.name%> </p>
+  <p> <%=country.visits_to_country %> times!  </p>
+  <hr>
+<% end %>
