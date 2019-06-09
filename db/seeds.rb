@@ -1,6 +1,7 @@
 require("pry-byebug")
 require_relative( "../models/country.rb" )
 require_relative( "../models/city.rb" )
+require_relative( "../models/attraction.rb" )
 
 City.delete_all
 Country.delete_all
@@ -58,6 +59,14 @@ country4.save
 city1.save
 city2.save
 city3.save
+
+  attraction1 = Attraction.new({
+    "name" => "Eiffel Tower",
+    "city_id" => city2.id,
+    "review" => "Amazing views but really long queue!"
+    })
+
+attraction1.save
 
 binding.pry
 nil

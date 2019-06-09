@@ -1,3 +1,4 @@
+DROP TABLE attractions;
 DROP TABLE cities;
 DROP TABLE countries;
 
@@ -17,4 +18,12 @@ CREATE TABLE cities
   visits_to_city INT4,
   has_visited_city BOOLEAN,
   country_id INT8 REFERENCES countries(id)
+);
+
+CREATE TABLE attractions
+(
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255) not null,
+  city_id INT8 REFERENCES cities(id),
+  review TEXT 
 );
