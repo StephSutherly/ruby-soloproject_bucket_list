@@ -3,6 +3,20 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/country.rb' )
 also_reload( '../models/*' )
 
+#NEW
+get '/countries/new' do
+  @countries = Country.all
+  @cities = City.all
+  erb(:"countries/new")
+end
+
+#CREATE
+post '/countries' do
+  @country = Country.new(params)
+  @country.save
+  erb(:"countries/create")
+end
+
 #INDEX
 get '/countries' do
   @countries = Country.all()
@@ -14,3 +28,9 @@ get '/countries/:id' do
   @country = Country.find(params['id'].to_i)
   erb(:"countries/show")
 end
+
+#EDIT
+# get '/countries/:id' do
+#   @country = Country.find(params['id'].to_i)
+#   erb(:"countries/show")
+# end
