@@ -43,10 +43,26 @@ attr_accessor :name, :city_id, :review
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = 'DELETE FROM attractions
+    WHERE id = $1'
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.find(id)
+    sql = 'SELECT * FROM attractions
+    WHERE id = $1'
+    values = [id]
+    attraction = SqlRunner.run(sql, values)
+    result = Attraction.new(attraction.first)
+    return result
+  end
+
   def self.all
     sql = "SELECT * FROM attractions"
     attractions = SqlRunner.run(sql)
-    return City.map_items(attractions)
+    return Attraction.map_items(attractions)
   end
 
   def self.map_items(attraction_data)
