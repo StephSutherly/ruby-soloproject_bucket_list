@@ -1,3 +1,5 @@
+    EDIT NOT WORKING WHEN CLICK SUBMIT! 
+
     SEPARATING VISIED FROM YET-TO-VISIT:
 
 I want to add an if statement to my countries/index.erb so that only the countries I have visited show up. How to do this?
@@ -25,4 +27,6 @@ def self.count_if_visited()
   end
 end
 
-                
+    ATTRACTION TO COUNTRY CASCADE POSSIBLE?
+
+As attraction is the lowest item on my database, is there a way to add a new attraction that then fills in the city table & country table?

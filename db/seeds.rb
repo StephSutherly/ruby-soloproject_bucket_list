@@ -3,6 +3,7 @@ require_relative( "../models/country.rb" )
 require_relative( "../models/city.rb" )
 require_relative( "../models/attraction.rb" )
 
+Attraction.delete_all
 City.delete_all
 Country.delete_all
 
@@ -66,7 +67,21 @@ city3.save
     "review" => "Amazing views but really long queue!"
     })
 
+  attraction2 = Attraction.new({
+    "name" => "The Louvre",
+    "city_id" => city2.id,
+    "review" => "Could have spend three weeks here and still not seen it all!"
+    })
+
+  attraction3 = Attraction.new({
+    "name" => "Jardin des plantes",
+    "city_id" => city1.id,
+    "review" => "Beautiful and enchanting gardens - great with kids"
+    })
+
 attraction1.save
+attraction2.save
+attraction3.save
 
 binding.pry
 nil

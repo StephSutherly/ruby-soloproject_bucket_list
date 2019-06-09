@@ -29,4 +29,21 @@ attr_accessor :name, :city_id, :review
     @id = results.first()['id'].to_i
   end
 
+  def self.all
+    sql = "SELECT * FROM attractions"
+    attractions = SqlRunner.run(sql)
+    return City.map_items(attractions)
+  end
+
+  def self.map_items(attraction_data)
+    result = attraction_data.map { |attraction| Attraction.new(attraction) }
+    return result
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM attractions;"
+    SqlRunner.run(sql)
+  end
+
+
 end
