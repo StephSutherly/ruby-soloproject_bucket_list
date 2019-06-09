@@ -10,3 +10,7 @@ get '/countries' do
 end
 
 #SHOW
+get '/countries/:id' do
+  @country = Country.find(params['id'].to_i)
+  erb(:"countries/show")
+end

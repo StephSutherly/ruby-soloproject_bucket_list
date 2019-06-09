@@ -17,8 +17,22 @@ country2 = Country.new({
   "has_visited_country" => "true"
   })
 
+country3 = Country.new({
+  "name" => "Turkey",
+  "visits_to_country" => "1",
+  "has_visited_country" => "true"
+  })
+
+country4 = Country.new({
+  "name" => "Peru",
+  "visits_to_country" => "0",
+  "has_visited_country" => "false"
+  })
+
 country1.save
 country2.save
+country3.save
+country4.save
 
  city1 = City.new({
    "name" => "Nantes",
