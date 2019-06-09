@@ -53,6 +53,15 @@ attr_accessor :name, :visits_to_city, :has_visited_city, :country_id
     SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = 'SELECT * FROM cities
+    WHERE id = $1'
+    values = [id]
+    city = SqlRunner.run(sql, values)
+    result = City.new(city.first)
+    return result
+  end 
+
   def self.all
     sql = "SELECT * FROM cities"
     cities = SqlRunner.run(sql)
