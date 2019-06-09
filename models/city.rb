@@ -31,6 +31,21 @@ attr_accessor :name, :visits_to_city, :has_visited_city, :country_id
     @id = results.first()['id'].to_i
   end
 
+  def update()
+    sql = 'UPDATE cities SET (
+    name,
+    visits_to_city,
+    has_visited_city,
+    country_id
+    ) =
+    (
+    $1, $2, $3, $4
+    )
+    WHERE id = $5'
+    values = [@name, @visits_to_city, @has_visited_city, @country_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def delete()
     sql = 'DELETE FROM cities
     WHERE id = $1'
