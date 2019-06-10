@@ -4,6 +4,10 @@
 
 <ul>
   <% @city.attractions.each do |attraction| %>
-  <li><%= attraction.name%> || <%= attraction.review %></li>
+  <li><%= attraction.name%> || "<%= attraction.review %>"</li>
   <% end  %>
 </ul>
+
+<a href="/attractions/new">Add Attraction</a>
+
+<a href="/cities/<%=@city.id%>/edit">Edit</a>

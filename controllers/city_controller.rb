@@ -32,3 +32,17 @@ get '/cities/:id' do
   @countries = Country.all
   erb(:"cities/show")
 end
+
+#EDIT
+get '/cities/:id/edit' do
+  @city = City.find(params['id'].to_i)
+  @countries = Country.all
+  erb(:"cities/edit")
+end
+
+#UPDATE
+post '/cities/:id' do
+  @city = City.new(params)
+  @city.update()
+  erb(:"cities/update")
+end
