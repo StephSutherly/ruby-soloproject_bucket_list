@@ -1,5 +1,8 @@
 <h1>Countries I'd like to Visit</h1>
 
+<a href="/countries/new">Add Country</a>
+<br>
+<hr>
 <% for country in @countries %>
   <p><%=country.name%></p>
   <p><a href="/countries/<%=country.id%>">Show Country</a></p>

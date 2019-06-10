@@ -4,5 +4,7 @@ require_relative('controllers/country_controller')
 require_relative('controllers/city_controller')
 
 get '/' do
+  @visited_countries = Country.visited(true)
+  @unvisited_countries = Country.visited(false)
   erb(:index)
 end
