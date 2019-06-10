@@ -59,6 +59,14 @@ attr_accessor :name, :city_id, :review
     return result
   end
 
+  def self.find_by_city_id(city_id)
+    sql = 'SELECT * FROM attractions
+    WHERE city_id = $1'
+    values = [city_id]
+    attractions = SqlRunner.run(sql, values)
+    result = Attraction.map_items(attractions)
+  end
+
   def self.all
     sql = "SELECT * FROM attractions"
     attractions = SqlRunner.run(sql)

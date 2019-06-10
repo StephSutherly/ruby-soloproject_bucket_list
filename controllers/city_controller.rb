@@ -9,7 +9,6 @@ also_reload( '../models/*' )
 get '/cities/new' do
   @countries = Country.all
   @cities = City.all
-  @attractions = Attraction.all
   erb(:"cities/new")
 end
 
@@ -30,7 +29,7 @@ end
 get '/cities/:id' do
   @city = City.find(params['id'].to_i)
   @countries = Country.all
-  @attraction = Attraction.find(params['id'].to_i)
+  # @attractions = Attraction.find_by_city_id(@city.id)
   erb(:"cities/show")
 end
 

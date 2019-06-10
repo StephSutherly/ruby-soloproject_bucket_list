@@ -5,11 +5,11 @@
 <ul>
   <% @city.attractions.each do |attraction| %>
   <li><%= attraction.name%> || "<%= attraction.review %>"</li>
+  <a href="/attractions/<%=attraction.id%>/edit">Edit Attraction</a>
   <% end  %>
 </ul>
 
 <a href="/cities/<%=@city.id%>/edit">Edit City</a>
 <br>
-<a href="/attractions/<%=@attraction.id%>/edit">Edit Attraction</a>
 <br>
 <a href="/attractions/new">Add Attraction</a>
