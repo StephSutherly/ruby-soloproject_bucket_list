@@ -5,6 +5,21 @@ require_relative( '../models/country.rb' )
 require_relative( '../models/attraction.rb' )
 also_reload( '../models/*' )
 
+#NEW
+get '/cities/new' do
+  @countries = Country.all
+  @cities = City.all
+  @attractions = Attraction.all
+  erb(:"cities/new")
+end
+
+#CREATE
+post '/cities' do
+  @city = City.new(params)
+  @city.save
+  erb(:"cities/create")
+end
+
 #INDEX
 get '/cities' do
   @cities = City.all()

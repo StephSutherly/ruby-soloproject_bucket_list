@@ -1,0 +1,22 @@
+<h1>Add a New City</h1>
+<form action="/cities" method="post">
+
+  <label for="country">
+    Country:
+    <select id ="country" name="country_id">
+      <% for country in @countries %>
+      <option value="<%=country.id%>"><%= country.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+
+  <label for="name">City:</label>
+    <input type="text" name="name" id="name">
+    <br>
+
+    <label for="visits_to_city">Times I have been here so far:</label>
+      <input type="number" value="0"  name="visits_to_city" id="visits_to_city">
+
+    <input type="submit" value="Submit">
+</form>
