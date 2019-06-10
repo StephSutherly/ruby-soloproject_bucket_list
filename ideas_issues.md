@@ -1,4 +1,12 @@
-    EDIT NOT WORKING WHEN CLICK SUBMIT! 
+
+
+    CITY SHOW VIEW ATTRACTIONS NOT WORKING:
+    <ul>
+      <% @city.attractions.each do |attraction| %>
+      <li><%= attraction.name %></li>
+      <li><%= attraction.review %></li>
+      <% end  %>
+    </ul>
 
     SEPARATING VISIED FROM YET-TO-VISIT:
 

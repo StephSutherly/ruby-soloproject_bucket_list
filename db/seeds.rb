@@ -70,7 +70,7 @@ city3.save
   attraction2 = Attraction.new({
     "name" => "The Louvre",
     "city_id" => city2.id,
-    "review" => "Could have spend three weeks here and still not seen it all!"
+    "review" => "Could have spent three weeks here and still not seen it all!"
     })
 
   attraction3 = Attraction.new({

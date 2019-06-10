@@ -23,6 +23,18 @@ get '/countries' do
   erb(:"countries/index")
 end
 
+#COUNTRIES VISITED
+get '/countries/visited' do
+  @countries = Country.visited(true)
+  erb(:"countries/visited")
+end
+
+#COUNTRIES NOT VISITED
+get '/countries/unvisited' do
+  @countries = Country.visited(false)
+  erb(:"countries/unvisited")
+end
+
 #SHOW
 get '/countries/:id' do
   @country = Country.find(params['id'].to_i)
@@ -34,4 +46,11 @@ get '/countries/:id/edit' do
   @country = Country.find(params['id'].to_i)
   @cities = City.all
   erb(:"countries/edit")
+end
+
+#UPDATE
+post '/countries/:id' do
+  @country = Country.new(params)
+  @country.update()
+  erb(:"countries/update")
 end

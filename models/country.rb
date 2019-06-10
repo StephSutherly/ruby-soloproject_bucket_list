@@ -9,8 +9,16 @@ attr_accessor :name, :visits_to_country, :has_visited_country
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @visits_to_country = options['visits_to_country'].to_i
-    @has_visited_country = options['has_visited_country']
+    if options['visits_to_country']
+      @visits_to_country = options['visits_to_country'].to_i
+    else
+      @visits_to_country = 0
+    end
+    if @visits_to_country == 0
+      @has_visited_country = false
+    else
+      @has_visited_country = true
+    end
   end
 
   def save()
@@ -71,6 +79,13 @@ attr_accessor :name, :visits_to_country, :has_visited_country
   def self.all
     sql = 'SELECT * FROM countries'
     countries = SqlRunner.run(sql)
+    return Country.map_items(countries)
+  end
+
+  def self.visited(has_visited_country)
+    sql = 'SELECT * FROM countries WHERE has_visited_country = $1'
+    values = [has_visited_country]
+    countries = SqlRunner.run(sql, values)
     return Country.map_items(countries)
   end
 

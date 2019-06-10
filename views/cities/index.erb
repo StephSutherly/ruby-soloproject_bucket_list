@@ -2,7 +2,8 @@
 <p>I have visited</p>
 <% for city in @cities %>
   <p> <%=city.name%> </p>
+  <p><a href="/cities/<%=city.id%>">show city</a></p>
+  <hr>
 <% end %>
-<hr>
 
 <!--Can I add in here the name of the Country using .country method?  -->

@@ -1,0 +1,9 @@
+<h1><%=@city.name%></h1>
+<p>I've been to this city <%= @city.visits_to_city %> times </p>
+<h3>Attractions I've been to in <%=@city.name%>: </h3>
+
+<ul>
+  <% @city.attractions.each do |attraction| %>
+  <li><%= attraction.name%> || <%= attraction.review %></li>
+  <% end  %>
+</ul>
