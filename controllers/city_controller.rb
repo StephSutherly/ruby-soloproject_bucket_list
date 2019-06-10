@@ -30,6 +30,7 @@ end
 get '/cities/:id' do
   @city = City.find(params['id'].to_i)
   @countries = Country.all
+  @attraction = Attraction.find(params['id'].to_i)
   erb(:"cities/show")
 end
 

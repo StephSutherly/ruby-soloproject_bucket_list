@@ -1,0 +1,21 @@
+<h1>Edit --<%=@attraction.name %>-- </h1>
+<form action="/attractions" method="post">
+
+  <label for="city">
+    City:
+    <select id ="city" name="city_id">
+      <% for city in @cities %>
+      <option value="<%=city.id%>"><%= city.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <label for="name">Attraction:</label>
+    <input type="text" value="<%=@attraction.name%>" name="name" id="name">
+    <br>
+
+    <label for="review">Comment:</label>
+      <input type="text" value="<%=@attraction.review%>" name="review" id="review">
+
+    <input type="submit" value="Submit">
+</form>

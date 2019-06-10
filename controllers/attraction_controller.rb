@@ -18,3 +18,17 @@ post '/attractions' do
   @attraction.save
   erb(:"attractions/create")
 end
+
+#EDIT
+get '/attractions/:id/edit' do
+  @attraction = Attraction.find(params['id'].to_i)
+  @cities = City.all
+  erb(:"attractions/edit")
+end
+
+#UPDATE
+post '/attractions/:id' do
+  @attraction = Attraction.new(params)
+  @attraction.update()
+  erb(:"attractions/update")
+end
