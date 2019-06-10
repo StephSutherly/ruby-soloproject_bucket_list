@@ -5,11 +5,14 @@
 
 <ul>
   <% @country.cities.each do |city| %>
-  <li><%= city.name %></li>
+  <li><strong><%= city.name %></strong></li>
+  <% city.attractions.each do |attraction| %>
+  <%= attraction.name%> || <%= attraction.review %>
+  <br>
+  <br>
+  <% end  %>
   <% end  %>
 </ul>
-
-!!I Would also like to list the attractions for list country here!!
 
 <br>
 <br>
