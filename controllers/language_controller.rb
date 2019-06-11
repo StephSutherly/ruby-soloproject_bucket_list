@@ -39,8 +39,8 @@ get '/languages/unspoken' do
   erb(:"languages/unspoken")
 end
 
-# #SHOW
-# get '/languages/:id' do
-#   @language = Language.find(params['id'].to_i)
-#   erb(:"languages/show")
-# end
+#SHOW
+get '/languages/:id' do
+  @language = Language.find(params['id'].to_i)
+  erb(:"languages/show")
+end
