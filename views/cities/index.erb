@@ -3,10 +3,9 @@
 <hr>
 <% for city in @cities %>
   <p>I have visited:
-    <a href="/cities/<%=city.id%>">
-      <%=city.name%></a>
+    <a href="/cities/<%=city.id%>"><%=city.name%> || </a>
+    <% country = city.country %>
+    <a href="/countries/<%=country.id%>"><%=country.name %></a>
+    </p>
     <hr>
 <% end %>
-
-<!--Can I add in here the name of the Country using .country method?  -->
-<!--This gives me a hash - how to get it out?  -->

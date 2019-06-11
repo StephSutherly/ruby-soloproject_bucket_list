@@ -1,6 +1,4 @@
 
-  -  !!!ADD IN NAME OF COUNTRY TO CITY INDEX USING .COUNTRY METHOD!
-It returns a hash - how can I get the name out?
 
   -  ADD LANGUAGES SPOKEN COUNT TO APP HOME
 
@@ -38,3 +36,6 @@ COMPLETE/RESOLVED
 
   -  !!!ATTRACTION EDIT NOT GOING TO UPDATE PAGE - WHY?
   It goes to create page instead because in the edit page I wasn't sending to"/countries/<%=@attraction.id%>"!
+
+  -  !!!ADD IN NAME OF COUNTRY TO CITY INDEX USING .COUNTRY METHOD!
+  I thought it returned a hash but it was actually a class object - use .name
