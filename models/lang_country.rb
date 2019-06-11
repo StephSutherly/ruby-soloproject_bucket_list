@@ -26,4 +26,43 @@ class LangCountry
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM lang_countries"
+    results = SqlRunner.run( sql )
+    return results.map { |biting| Biting.new( biting ) }
+  end
+
+  def language()
+    sql = "SELECT * FROM languages
+    WHERE id = $1"
+    values = [@language_id]
+    results = SqlRunner.run( sql, values )
+    return Language.new( results.first )
+  end
+
+  def country()
+    sql = "SELECT * FROM countries
+    WHERE id = $1"
+    values = [@country_id]
+    results = SqlRunner.run( sql, values )
+    return Country.new( results.first )
+  end
+
+  def self.all
+    sql = 'SELECT * FROM lang_countries'
+    lang_countries = SqlRunner.run(sql)
+    return LangCountry.map_items(lang_countries)
+  end
+
+  def self.map_items(lang_country_data)
+    result = lang_country_data.map { |lang_country| LangCountry.new(lang_country) }
+    return result
+  end
+
+  def self.delete_all()
+    sql = 'DELETE FROM lang_countries'
+    SqlRunner.run(sql)
+  end
+
+
 end
