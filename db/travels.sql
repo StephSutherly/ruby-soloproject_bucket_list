@@ -15,7 +15,7 @@ CREATE TABLE countries
 (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) not null,
-  -- add a flag/picture?
+  continent VARCHAR(255),
   visits_to_country INT4,
   has_visited_country BOOLEAN
 );

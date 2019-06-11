@@ -6,11 +6,12 @@ require_relative( '../models/lang_country.rb' )
 class Country
 
 attr_reader :id
-attr_accessor :name, :visits_to_country, :has_visited_country
+attr_accessor :name, :continent, :visits_to_country, :has_visited_country
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
+    @continent = options['continent']
     if options['visits_to_country']
       @visits_to_country = options['visits_to_country'].to_i
     else
@@ -27,15 +28,16 @@ attr_accessor :name, :visits_to_country, :has_visited_country
     sql = 'INSERT INTO countries
     (
       name,
+      continent,
       visits_to_country,
       has_visited_country
     )
     VALUES
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
     RETURNING id'
-    values = [@name, @visits_to_country, @has_visited_country]
+    values = [@name, @continent, @visits_to_country, @has_visited_country]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -62,6 +64,7 @@ attr_accessor :name, :visits_to_country, :has_visited_country
     SET
     (
       name,
+      continent,
       visits_to_country,
       has_visited_country
       ) =
@@ -69,7 +72,7 @@ attr_accessor :name, :visits_to_country, :has_visited_country
         $1, $2, $3
         )
       WHERE id = $4'
-      values = [@name, @visits_to_country, @has_visited_country, @id]
+      values = [@name, @continent, @visits_to_country, @has_visited_country, @id]
       SqlRunner.run(sql, values)
     end
 

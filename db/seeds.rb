@@ -32,48 +32,63 @@ language3.save
 
 country1 = Country.new({
   "name" => "South Africa",
+  "continent" => "Africa",
   "visits_to_country" => "7",
   "has_visited_country" => "true"
   })
 
 country2 = Country.new({
   "name" => "France",
+  "continent" => "Europe",
   "visits_to_country" => "3",
   "has_visited_country" => "true"
   })
 
 country3 = Country.new({
   "name" => "Turkey",
+  "continent" => "Europe",
   "visits_to_country" => "1",
   "has_visited_country" => "true"
   })
 
 country4 = Country.new({
   "name" => "Peru",
+  "continent" => "South America",
   "visits_to_country" => "0",
   "has_visited_country" => "false"
   })
 
 country5 = Country.new({
   "name" => "Zimbabwe",
+  "continent" => "Africa",
   "visits_to_country" => "3",
   "has_visited_country" => "true"
   })
 
 country6 = Country.new({
   "name" => "New Zealand",
+  "continent" => "Oceania",
   "visits_to_country" => "0",
   "has_visited_country" => "false"
   })
 
 country7 = Country.new({
   "name" => "Sweden",
+  "continent" => "Europe",
   "visits_to_country" => "0",
   "has_visited_country" => "false"
   })
 
 country8 = Country.new({
   "name" => "Germany",
+  "continent" => "Europe",
+  "visits_to_country" => "1",
+  "has_visited_country" => "true"
+  })
+
+country9 = Country.new({
+  "name" => "Belgium",
+  "continent" => "Europe",
   "visits_to_country" => "1",
   "has_visited_country" => "true"
   })
@@ -86,6 +101,7 @@ country5.save
 country6.save
 country7.save
 country8.save
+country9.save
 
 lang_country1 = LangCountry.new({
   "language_id" => language2.id,
