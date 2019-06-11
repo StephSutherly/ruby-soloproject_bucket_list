@@ -3,7 +3,11 @@
   border-radius: 3%;
   padding: 8px 12px;
   color: white;
-  background-color: green;
+  background-color:  #00802b;
   cursor:pointer;
   font-family: 'verdana';
+}
+
+.btn:hover {
+  background-color: #009933;
 }
