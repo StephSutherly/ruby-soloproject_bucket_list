@@ -5,18 +5,24 @@
 
   <link rel="icon" href="/images/globe.png" />
 
+  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="/styles/forms.css">
+  <link rel="stylesheet" type="text/css" href="/styles/structures.css">
+
   </head>
   <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/countries">All Countries</a>
-        <a href="/countries/visited">Visited Countries</a>
-        <a href="/countries/unvisited">Countries To Visit</a>
-        <a href="/cities">Cities Travelled</a>
-        <a href="/languages">All Languages</a>
-        <a href="/languages/spoken">Spoken Languages</a>
-        <a href="/languages/unspoken">Unspoken Languages</a>
-      </nav>
+    <main>
+      <nav>
+          <a href="/">Home</a>
+          <a href="/countries">All Countries</a>
+          <a href="/countries/visited">Visited Countries</a>
+          <a href="/countries/unvisited">Countries To Visit</a>
+          <a href="/cities">Cities Travelled</a>
+          <a href="/languages">All Languages</a>
+          <a href="/languages/spoken">Spoken Languages</a>
+          <a href="/languages/unspoken">Unspoken Languages</a>
+        </nav>
         <%= yield %>
+    </main>
   </body>
 </html>

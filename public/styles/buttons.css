@@ -1,1 +1,9 @@
-
+.btn {
+  border:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: white;
+  background-color: green;
+  cursor:pointer;
+  font-family: 'verdana';
+}
