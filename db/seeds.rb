@@ -31,10 +31,38 @@ country4 = Country.new({
   "has_visited_country" => "false"
   })
 
+country5 = Country.new({
+  "name" => "Zimbabwe",
+  "visits_to_country" => "3",
+  "has_visited_country" => "true"
+  })
+
+country6 = Country.new({
+  "name" => "New Zealand",
+  "visits_to_country" => "0",
+  "has_visited_country" => "false"
+  })
+
+country7 = Country.new({
+  "name" => "Sweden",
+  "visits_to_country" => "0",
+  "has_visited_country" => "false"
+  })
+
+country8 = Country.new({
+  "name" => "Germany",
+  "visits_to_country" => "1",
+  "has_visited_country" => "true"
+  })
+
 country1.save
 country2.save
 country3.save
 country4.save
+country5.save
+country6.save
+country7.save
+country8.save
 
  city1 = City.new({
    "name" => "Nantes",

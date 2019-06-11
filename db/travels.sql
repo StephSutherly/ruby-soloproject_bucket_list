@@ -1,6 +1,15 @@
+-- DROP TABLE languages_countries;
 DROP TABLE attractions;
 DROP TABLE cities;
 DROP TABLE countries;
+DROP TABLE languages;
+
+CREATE TABLE languages
+(
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255),
+  can_speak BOOLEAN
+);
 
 CREATE TABLE countries
 (
@@ -25,5 +34,12 @@ CREATE TABLE attractions
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) not null,
   city_id INT8 REFERENCES cities(id),
-  review TEXT 
+  review TEXT
 );
+
+-- CREATE TABLE languages_countries
+-- (
+--   id SERIAL8 PRIMARY KEY,
+--   language_id INT8 REFERENCES languages(id),
+--   country_id INT8 REFERENCES countries(id)
+-- );

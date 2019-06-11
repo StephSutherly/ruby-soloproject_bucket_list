@@ -3,6 +3,7 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/city.rb' )
 require_relative( '../models/country.rb' )
 require_relative( '../models/attraction.rb' )
+require_relative( '../models/language.rb' )
 also_reload( '../models/*' )
 
 #NEW

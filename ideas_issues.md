@@ -1,12 +1,10 @@
-  -  !ATTRACTION EDIT NOT GOING TO UPDATE PAGE - WHY?
+  -  !!!ATTRACTION EDIT NOT GOING TO UPDATE PAGE - WHY?
 It goes to create page instead.
 
-  -  !ADD IN NAME OF COUNTRY TO CITY INDEX USING .COUNTRY METHOD!
+  -  !!!ADD IN NAME OF COUNTRY TO CITY INDEX USING .COUNTRY METHOD!
 It returns a hash - how can I get the name out?
 
   -  ADD DELETE FOR ALL MODELS?
-
-  -  ADD LINKS TO SHOW PAGES, I.E. CLICK ON WORD RATHER THAN LINK
 
   -  ADD SEARCH FOR DESTINATION BY LANGUAGE, ATTRACTION_TYPE, CITY OR COUNTRY
 
@@ -27,3 +25,13 @@ As attraction is the lowest item on my database, is there a way to add a new att
 XX Workable but not ideal solution is to copy add new country & city links to new pages.
 
   -  ADD LANGUAGES SPOKEN COUNT TO APP HOME
+
+
+
+
+
+
+
+COMPLETE
+
+  -  ADD LINKS TO SHOW PAGES, I.E. CLICK ON WORD RATHER THAN LINK
