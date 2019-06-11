@@ -1,4 +1,5 @@
 require_relative( '../db/sql_runner' )
+require_relative( "../models/country.rb" )
 
 class Language
 
@@ -25,6 +26,13 @@ attr_accessor :name, :can_speak
     values = [@name, @can_speak]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
+  end
+
+  def countries()
+    sql = 'SELECT * FROM countries WHERE country_id = $1'
+    values = [@id]
+    countries = SqlRunner.run(sql, values)
+    return Country.map_items(countries)
   end
 
   def update()
