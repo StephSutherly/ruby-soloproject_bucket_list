@@ -23,7 +23,7 @@ end
 
 #INDEX
 get '/countries' do
-  @countries = Country.all()
+  @countries = Country.all
   erb(:"countries/index")
 end
 
