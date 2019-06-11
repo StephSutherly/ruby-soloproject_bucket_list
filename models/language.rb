@@ -27,6 +27,21 @@ attr_accessor :name, :can_speak
     @id = results.first()['id'].to_i
   end
 
+  def update()
+    sql = 'UPDATE languages
+    SET
+    (
+      name,
+      can_speak
+      ) =
+      (
+        $1, $2
+        )
+      WHERE id = $3'
+      values = [@name, @can_speak, @id]
+      SqlRunner.run(sql, values)
+    end
+
   def self.all
     sql = 'SELECT * FROM languages'
     languages = SqlRunner.run(sql)

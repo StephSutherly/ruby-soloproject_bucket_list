@@ -19,8 +19,14 @@ language2 = Language.new({
   "can_speak" => "true"
   })
 
+language3 = Language.new({
+  "name" => "Swedish",
+  "can_speak" => "false"
+  })
+
 language1.save
 language2.save
+language3.save
 
 country1 = Country.new({
   "name" => "South Africa",
