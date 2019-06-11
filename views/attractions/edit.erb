@@ -5,7 +5,8 @@
     City:
     <select id ="city" name="city_id">
       <% for city in @cities %>
-      <option value="<%=city.id%>"><%= city.name %></option>
+        <% selected_tag = @attraction.city_id == city.id ? "selected" : "" %>
+        <option value="<%=city.id%>" <%= selected_tag %> ><%= city.name %></option>
       <% end %>
     </select>
   </label>

@@ -6,7 +6,8 @@
     Country:
     <select id ="country" name="country_id">
       <% for country in @countries %>
-      <option value="<%=country.id%>"><%= country.name %></option>
+        <% selected_tag = @city.country_id == country.id ? "selected" : "" %>
+        <option value="<%=country.id%>" <%= selected_tag %>> <%= country.name %></option>
       <% end %>
     </select>
   </label>
