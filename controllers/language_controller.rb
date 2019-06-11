@@ -27,14 +27,14 @@ get '/languages' do
   erb(:"languages/index")
 end
 
-# #LANGUAGES SPOKEN
-# get '/languages/spoken' do
-#   @languages = Language.speaks(true)
-#   erb(:"languages/spoken")
-# end
-#
+#LANGUAGES SPOKEN
+get '/languages/spoken' do
+  @languages = Language.speaks(true)
+  erb(:"languages/spoken")
+end
+
 # #LANGUAGES NOT SPOKEN
-# get '/languages/unvisited' do
+# get '/languages/unspoken' do
 #   @languages = Language.speaks(false)
 #   erb(:"languages/unspoken")
 # end
