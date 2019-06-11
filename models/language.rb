@@ -42,6 +42,21 @@ attr_accessor :name, :can_speak
       SqlRunner.run(sql, values)
     end
 
+    def delete()
+      sql = 'DELETE FROM languages
+      WHERE id = $1'
+      values = [@id]
+      SqlRunner.run(sql, values)
+    end
+
+    def self.find(id)
+      sql = 'SELECT * FROM languages WHERE id = $1'
+      values = [id]
+      language = SqlRunner.run(sql, values)
+      result = Language.new(language.first)
+      return result
+    end
+
   def self.all
     sql = 'SELECT * FROM languages'
     languages = SqlRunner.run(sql)
