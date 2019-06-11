@@ -7,13 +7,20 @@ require_relative( '../models/language.rb' )
 Attraction.delete_all
 City.delete_all
 Country.delete_all
+Language.delete_all
 
 language1 = Language.new({
   "name" => "English",
   "can_speak" => "true"
   })
 
+language2 = Language.new({
+  "name" => "French",
+  "can_speak" => "true"
+  })
+
 language1.save
+language2.save
 
 country1 = Country.new({
   "name" => "South Africa",

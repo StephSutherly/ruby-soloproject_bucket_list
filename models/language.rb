@@ -27,4 +27,20 @@ attr_accessor :name, :can_speak
     @id = results.first()['id'].to_i
   end
 
+  def self.all
+    sql = 'SELECT * FROM languages'
+    languages = SqlRunner.run(sql)
+    return Language.map_items(languages)
+  end
+
+  def self.map_items(language_data)
+    result = language_data.map { |language| Language.new(language) }
+    return result
+  end
+
+  def self.delete_all()
+    sql = 'DELETE FROM languages'
+    SqlRunner.run(sql)
+  end
+
 end
