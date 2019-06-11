@@ -33,11 +33,11 @@ get '/languages/spoken' do
   erb(:"languages/spoken")
 end
 
-# #LANGUAGES NOT SPOKEN
-# get '/languages/unspoken' do
-#   @languages = Language.speaks(false)
-#   erb(:"languages/unspoken")
-# end
+#LANGUAGES NOT SPOKEN
+get '/languages/unspoken' do
+  @languages = Language.speaks(false)
+  erb(:"languages/unspoken")
+end
 
 # #SHOW
 # get '/languages/:id' do
