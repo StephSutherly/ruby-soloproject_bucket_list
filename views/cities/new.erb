@@ -1,6 +1,6 @@
 <h1>Add a New City</h1>
-<form action="/cities" method="post">
 
+<form>
   <label for="country">
     Country:
     <select id ="country" name="country_id">
@@ -9,7 +9,6 @@
       <% end %>
     </select>
   </label>
-
 
   <label for="name">City:</label>
     <input type="text" name="name" id="name">
@@ -20,3 +19,6 @@
 
     <input type="submit" value="Submit">
 </form>
+
+<br>
+<p>Country not yet saved? - <a href="/countries/new">Add Country</a></p>
