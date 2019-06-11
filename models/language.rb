@@ -1,5 +1,4 @@
 require_relative( '../db/sql_runner' )
-require_relative( "../models/language.rb" )
 
 class Language
 
@@ -10,6 +9,22 @@ attr_accessor :name, :can_speak
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @can_speak = options['can_speak']
+  end
+
+  def save()
+    sql = 'INSERT INTO languages
+    (
+      name,
+      can_speak
+    )
+    VALUES
+    (
+      $1, $2
+    )
+    RETURNING id'
+    values = [@name, @can_speak]
+    results = SqlRunner.run(sql, values)
+    @id = results.first()['id'].to_i
   end
 
 end

@@ -8,6 +8,13 @@ Attraction.delete_all
 City.delete_all
 Country.delete_all
 
+language1 = Language.new({
+  "name" => "English",
+  "can_speak" => "true"
+  })
+
+language1.save
+
 country1 = Country.new({
   "name" => "South Africa",
   "visits_to_country" => "7",
