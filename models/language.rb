@@ -28,12 +28,15 @@ attr_accessor :name, :can_speak
     @id = results.first()['id'].to_i
   end
 
-  def countries()
-    sql = 'SELECT * FROM countries WHERE country_id = $1'
-    values = [@id]
-    countries = SqlRunner.run(sql, values)
-    return Country.map_items(countries)
-  end
+  # def countries()
+  #   sql = 'SELECT c.* FROM countries c
+  #         INNER JOIN languages_countries t
+  #         ON t.country_id = c.id
+  #         WHERE t.language_id = $1'
+  #   values = [@id]
+  #   countries = SqlRunner.run(sql, values)
+  #   return Country.map_items(countries)
+  # end
 
   def update()
     sql = 'UPDATE languages
@@ -68,6 +71,13 @@ attr_accessor :name, :can_speak
   def self.all
     sql = 'SELECT * FROM languages'
     languages = SqlRunner.run(sql)
+    return Language.map_items(languages)
+  end
+
+  def self.speaks(can_speak)
+    sql = 'SELECT * FROM languages WHERE can_speak = $1'
+    values = [can_speak]
+    languages = SqlRunner.run(sql, values)
     return Language.map_items(languages)
   end
 
