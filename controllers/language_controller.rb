@@ -42,5 +42,6 @@ end
 #SHOW
 get '/languages/:id' do
   @language = Language.find(params['id'].to_i)
+  @countries = @language.countries
   erb(:"languages/show")
 end

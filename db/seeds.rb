@@ -97,7 +97,7 @@ lang_country2 = LangCountry.new({
   "country_id" => country7.id
   })
 
-lang_country2 = LangCountry.new({
+lang_country3 = LangCountry.new({
   "language_id" => language1.id,
   "country_id" => country1.id
   })
