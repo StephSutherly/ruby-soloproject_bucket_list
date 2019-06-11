@@ -1,5 +1,3 @@
-  -  !!!ATTRACTION EDIT NOT GOING TO UPDATE PAGE - WHY?
-It goes to create page instead.
 
   -  !!!ADD IN NAME OF COUNTRY TO CITY INDEX USING .COUNTRY METHOD!
 It returns a hash - how can I get the name out?
@@ -32,6 +30,9 @@ XX Workable but not ideal solution is to copy add new country & city links to ne
 
 
 
-COMPLETE
+COMPLETE/RESOLVED
 
   -  ADD LINKS TO SHOW PAGES, I.E. CLICK ON WORD RATHER THAN LINK
+
+  -  !!!ATTRACTION EDIT NOT GOING TO UPDATE PAGE - WHY?
+  It goes to create page instead because in the edit page I wasn't sending to"/countries/<%=@attraction.id%>"!
