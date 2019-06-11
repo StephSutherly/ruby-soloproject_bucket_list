@@ -4,6 +4,7 @@
 
 <ul>
   <% for country in @countries %>
-      <li><%=country.name%></li>
+      <li><a href="/countries/<%=country.id%>">
+        <%=country.name%></a></li>
       <% end %>
 </ul>
