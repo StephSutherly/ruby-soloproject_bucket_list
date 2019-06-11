@@ -1,7 +1,9 @@
 <h1><%=@language.name%></h1>
 
 <h3>Countries in which <%=@language.name %> is spoken: </h3>
-<p> <% for country in @countries %>
-    <%=country.name%>
-    <% end %>
-</p>
+
+<ul>
+  <% for country in @countries %>
+      <li><%=country.name%></li>
+      <% end %>
+</ul>
