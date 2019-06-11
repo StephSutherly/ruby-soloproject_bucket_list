@@ -47,13 +47,15 @@ attr_accessor :name, :visits_to_country, :has_visited_country
     return City.map_items(cities)
   end
 
-#NEED TO ADD INNER JOIN & TABLE
-  # def languages()
-  #   sql = 'SELECT * FROM languages WHERE country_id = $1'
-  #   values = [@id]
-  #   languages = SqlRunner.run(sql, values)
-  #   return Language.map_items(languages)
-  # end
+  def languages()
+    sql = 'SELECT l.* FROM languages l
+          INNER JOIN lang_countries t
+          ON t.language_id = l.id
+          WHERE t.country_id = $1'
+    values = [@id]
+    languages = SqlRunner.run(sql, values)
+    return Language.map_items(languages)
+  end
 
   def update()
     sql = 'UPDATE countries
