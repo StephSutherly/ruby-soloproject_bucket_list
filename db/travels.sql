@@ -1,4 +1,4 @@
--- DROP TABLE languages_countries;
+DROP TABLE lang_countries;
 DROP TABLE attractions;
 DROP TABLE cities;
 DROP TABLE countries;
@@ -37,9 +37,9 @@ CREATE TABLE attractions
   review TEXT
 );
 
--- CREATE TABLE languages_countries
--- (
---   id SERIAL8 PRIMARY KEY,
---   language_id INT8 REFERENCES languages(id),
---   country_id INT8 REFERENCES countries(id)
--- );
+CREATE TABLE lang_countries
+(
+  id SERIAL8 PRIMARY KEY,
+  language_id INT8 REFERENCES languages(id),
+  country_id INT8 REFERENCES countries(id)
+);

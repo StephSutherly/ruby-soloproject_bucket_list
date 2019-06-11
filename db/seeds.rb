@@ -3,6 +3,7 @@ require_relative( "../models/country.rb" )
 require_relative( "../models/city.rb" )
 require_relative( "../models/attraction.rb" )
 require_relative( '../models/language.rb' )
+require_relative( '../models/lang_country.rb' )
 
 Attraction.delete_all
 City.delete_all
@@ -84,6 +85,13 @@ country5.save
 country6.save
 country7.save
 country8.save
+
+lang_country1 = LangCountry.new({
+  "language_id" => language2.id,
+  "country_id" => country2.id
+  })
+
+lang_country1.save
 
  city1 = City.new({
    "name" => "Nantes",

@@ -1,5 +1,7 @@
 require_relative( '../db/sql_runner' )
 require_relative( "../models/city.rb" )
+require_relative( '../models/language.rb' )
+require_relative( '../models/lang_country.rb' )
 
 class Country
 
@@ -44,6 +46,14 @@ attr_accessor :name, :visits_to_country, :has_visited_country
     cities = SqlRunner.run(sql, values)
     return City.map_items(cities)
   end
+
+#NEED TO ADD INNER JOIN & TABLE
+  # def languages()
+  #   sql = 'SELECT * FROM languages WHERE country_id = $1'
+  #   values = [@id]
+  #   languages = SqlRunner.run(sql, values)
+  #   return Language.map_items(languages)
+  # end
 
   def update()
     sql = 'UPDATE countries
