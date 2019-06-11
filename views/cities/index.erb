@@ -1,11 +1,12 @@
 <h1>Cities I've Visited</h1>
 <a href="/cities/new">Add City</a>
 <hr>
-<p>I have visited:</p>
 <% for city in @cities %>
-  <p> <%=city.name%> </p>
-  <p><a href="/cities/<%=city.id%>">show city</a></p>
-  <hr>
+  <p>I have visited:
+    <a href="/cities/<%=city.id%>">
+      <%=city.name%></a>
+    <hr>
 <% end %>
 
 <!--Can I add in here the name of the Country using .country method?  -->
+<!--This gives me a hash - how to get it out?  -->

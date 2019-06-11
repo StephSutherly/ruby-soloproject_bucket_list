@@ -1,6 +1,9 @@
   -  !ATTRACTION EDIT NOT GOING TO UPDATE PAGE - WHY?
 It goes to create page instead.
 
+  -  !ADD IN NAME OF COUNTRY TO CITY INDEX USING .COUNTRY METHOD!
+It returns a hash - how can I get the name out?
+
   -  ADD DELETE FOR ALL MODELS?
 
   -  ADD LINKS TO SHOW PAGES, I.E. CLICK ON WORD RATHER THAN LINK
