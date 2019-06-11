@@ -97,8 +97,14 @@ lang_country2 = LangCountry.new({
   "country_id" => country7.id
   })
 
+lang_country2 = LangCountry.new({
+  "language_id" => language1.id,
+  "country_id" => country1.id
+  })
+
 lang_country1.save
 lang_country2.save
+lang_country3.save
 
  city1 = City.new({
    "name" => "Nantes",

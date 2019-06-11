@@ -2,14 +2,14 @@
   -  !!!ADD IN NAME OF COUNTRY TO CITY INDEX USING .COUNTRY METHOD!
 It returns a hash - how can I get the name out?
 
+  -  ADD LANGUAGES SPOKEN COUNT TO APP HOME
+
   -  ON UPDATE FOR ATTRACTION - COULD I MAKE THIS SO THAT IT GOES BACK TO THE SPECIFIC CITY?
-Somehow get the city id in link? 
+Somehow get the city id in link?
 
   -  ADD DELETE FOR ALL MODELS?
 
   -  ADD SEARCH FOR DESTINATION BY LANGUAGE, ATTRACTION_TYPE, CITY OR COUNTRY
-
-  -  ADD ATTRACTION TYPE TO TABLES, MODELS
 
   -  ADD LANGUAGES AND INTEGRATE WITH COUNTRY
 
@@ -25,8 +25,7 @@ I.e. home index: "there are still 1 countries on my bucketlist!"
 As attraction is the lowest item on my database, is there a way to add a new attraction that then fills in the city table & country table?
 XX Workable but not ideal solution is to copy add new country & city links to new pages.
 
-  -  ADD LANGUAGES SPOKEN COUNT TO APP HOME
-
+  -  ADD ATTRACTION TYPE TO TABLES, MODELS
 
 
 
