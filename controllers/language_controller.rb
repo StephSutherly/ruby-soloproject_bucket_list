@@ -7,19 +7,19 @@ require_relative( '../models/language.rb' )
 # require_relative('controllers/lang_country_controller')
 also_reload( '../models/*' )
 
-# #NEW
-# get '/languages/new' do
-#   @languages = Language.all
-#   @countries = Country.all
-#   erb(:"languages/new")
-# end
-#
-# #CREATE
-# post '/languages' do
-#   @language = Language.new(params)
-#   @language.save
-#   erb(:"languages/create")
-# end
+#NEW
+get '/languages/new' do
+  @languages = Language.all
+  @countries = Country.all
+  erb(:"languages/new")
+end
+
+#CREATE
+post '/languages' do
+  @language = Language.new(params)
+  @language.save
+  erb(:"languages/create")
+end
 
 #INDEX
 get '/languages' do
