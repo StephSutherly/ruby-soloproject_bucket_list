@@ -1,9 +1,17 @@
 * {
-  font-family: 'verdana'
+  font-family: 'verdana';
+}
+
+body {
+  background: white url('/images/beach2light.jpg');
+  background-size: 100%;
+  color: black;
+  padding: 0px;
+  margin: 0px;
 }
 
 a, a:link {
-  color: #0033cc;
+  color: #003366;
   text-decoration: none;
 }
 
@@ -11,75 +19,6 @@ a:hover {
   text-decoration: underline;
 }
 a:visited {
-  color: #990099;
+  color: #004d1a;
   text-decoration: underline;
-}
-
-/* NAV BAR */
-.navbar {
-  overflow: hidden;
-  background-color: #004080;
-}
-
-/* NAV LINKS */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* KEEPS ALL ON ONE LINE */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* DROPDOWN BUTTON */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-/* CHANGE COLOUR ON DROP DOWN */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #009933;
-}
-
-/* DROPDOWN CONTENT (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* HOVER BACKGROUND ON DROPDOWN */
-.dropdown-content a:hover {
-  background-color: #e6f2ff;
-}
-
-/* HOVER SHOW DROPDOWN */
-.dropdown:hover .dropdown-content {
-  display: block;
 }
