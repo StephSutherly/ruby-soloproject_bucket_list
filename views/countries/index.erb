@@ -4,8 +4,8 @@
 <br>
 <hr>
 <h2>I have visited...</h2>
-  <p>
     <% for country in @countries %>
+    <p>
         <a href="/countries/<%=country.id%>">
           <%=country.name%></a>
             <%=country.visits_to_country %> times</p>

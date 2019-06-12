@@ -1,10 +1,9 @@
 <h1>Languages I speak</h1>
 
-<a href="/languages/new">Add Language</a>
+<a class="click" href="/languages/new">Add Language</a>
 <br>
 <hr>
 <% for language in @languages %>
     <p><a href="/languages/<%=language.id%>">
       <%=language.name%></a></p>
-  <hr>
 <% end %>

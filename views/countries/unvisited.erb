@@ -2,13 +2,11 @@
 
 <h2>There are still <%=@countries.count %> countries on my bucketlist!</h3></h2>
 
-<a href="/countries/new">Add Country</a>
+<a class="click" href="/countries/new">Add Country</a>
 <br>
 <hr>
 <% for country in @countries %>
-  <p>I have visited
+<p>
     <a href="/countries/<%=country.id%>">
-      <%=country.name%></a>
-        <%=country.visits_to_country %> times</p>
-  <hr>
+      <%=country.name%></a></p>
 <% end %>
