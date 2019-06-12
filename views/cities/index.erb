@@ -4,7 +4,7 @@
 <h2>I have visited</h2>
 <% for city in @cities %>
 <p>
-    <a href="/cities/<%=city.id%>"><%=city.name%> || </a>
+    <a href="/cities/<%=city.id%>"><%=city.name%> </a> ||
     <% country = city.country %>
     <a href="/countries/<%=country.id%>"><%=country.name %></a>
     </p>
