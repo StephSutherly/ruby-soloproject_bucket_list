@@ -12,17 +12,40 @@
   </head>
   <body>
     <main>
-      <nav>
+      <!-- <nav> -->
+        <div class="navbar">
           <a href="/">Home</a>
-          <a href="/countries">All Countries</a>
-          <a href="/countries/visited">Visited Countries</a>
-          <a href="/countries/unvisited">Countries To Visit</a>
-          <a href="/cities">Cities Travelled</a>
-          <a href="/languages">All Languages</a>
-          <a href="/languages/spoken">Spoken Languages</a>
-          <a href="/languages/unspoken">Unspoken Languages</a>
-        </nav>
-        <%= yield %>
+          <div class="dropdown">
+            <button class="dropbtn">Countries
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="/countries">All Countries</a>
+              <a href="/countries/visited">Visited Countries</a>
+              <a href="/countries/unvisited">Countries To Visit</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Cities
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="/cities">Cities Travelled</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Languages
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="/languages">All Languages</a>
+              <a href="/languages/spoken">Spoken Languages</a>
+              <a href="/languages/unspoken">Unspoken Languages</a>
+            </div>
+          </div>
+        </div>
+        <!-- </nav> -->
+      <%= yield %>
     </main>
   </body>
 </html>
