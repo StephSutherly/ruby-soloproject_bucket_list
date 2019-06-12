@@ -69,9 +69,9 @@ attr_accessor :name, :continent, :visits_to_country, :has_visited_country
       has_visited_country
       ) =
       (
-        $1, $2, $3
+        $1, $2, $3, $4
         )
-      WHERE id = $4'
+      WHERE id = $5'
       values = [@name, @continent, @visits_to_country, @has_visited_country, @id]
       SqlRunner.run(sql, values)
     end
