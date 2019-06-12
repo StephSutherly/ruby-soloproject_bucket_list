@@ -4,6 +4,7 @@ select {
  margin: 15px 0;
  font-size: 0.8em;
  -webkit-appearance: none;
- background: url('/images/globe.png') 96% / 15% no-repeat;
+ background: #99ccff url('/images/globe.png') 96% / 15% no-repeat;
  /* 96% = position along button; 15% = size of image */
+ border: 1px solid #3399ff;
 }

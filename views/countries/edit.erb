@@ -3,13 +3,17 @@
 <form action="/countries/<%=@country.id%>" method="post">
 
   <label for="name">Country:</label>
-    <input type="text" value="<%=@country.name%>" name="name" id="name">
-    <br>
+    <input class="btn2" type="text" value="<%=@country.name%>" name="name" id="name">
+
+  <br>
+
+  <label for="continent">Continent:</label>
+    <input class="btn2" type="text" value="<%=@country.continent%>" name="continent" id="continent">
 
   <br>
 
   <label for="visits_to_country">Times I have been here so far:</label>
-    <input type="number" value="<%=@country.visits_to_country%>"  name="visits_to_country" id="visits_to_country">
+    <input class="btn2" type="number" value="<%=@country.visits_to_country%>"  name="visits_to_country" id="visits_to_country">
 
     <input class="btn" type="submit" value="Update Country">
 </form>

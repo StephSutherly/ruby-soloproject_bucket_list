@@ -15,7 +15,7 @@ main {
 }
 
 a, a:link {
-  color: #003366;
+  color: #0000cc;
   text-decoration: none;
 }
 
@@ -23,7 +23,7 @@ a:hover {
   text-decoration: underline;
 }
 a:visited {
-  color: #004d1a;
+  color: #008000;
   text-decoration: underline;
 }
 

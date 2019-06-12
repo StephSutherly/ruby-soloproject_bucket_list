@@ -1,7 +1,7 @@
 .btn {
   border:0px none;
   border-radius: 3%;
-  padding: 8px 12px;
+  padding: 6px 10px;
   color: white;
   background-color:  #00802b;
   cursor:pointer;
@@ -10,4 +10,14 @@
 
 .btn:hover {
   background-color: #009933;
+}
+
+.btn2 {
+  border: 1px solid #3399ff;
+  border-radius: 3%;
+  padding: 6px 10px;
+  color: black;
+  background-color: #e6f2ff;
+  cursor:pointer;
+  font-family: 'verdana';
 }
