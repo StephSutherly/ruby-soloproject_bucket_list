@@ -10,6 +10,18 @@ body {
   margin: 0px;
 }
 
+main {
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
 a, a:link {
   color: #003366;
   text-decoration: none;
@@ -21,4 +33,9 @@ a:hover {
 a:visited {
   color: #004d1a;
   text-decoration: underline;
+}
+
+hr {
+  border-top: 1px solid #009933;
+  border-bottom: 1px solid #00802b;
 }
