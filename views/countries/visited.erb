@@ -1,5 +1,7 @@
 <h1>Countries I've Visited</h1>
 
+<h2>I have travelled to <%=@countries.count %> countries so far</h2>
+
 <% for country in @countries %>
   <p>I have visited
     <a href="/countries/<%=country.id%>">

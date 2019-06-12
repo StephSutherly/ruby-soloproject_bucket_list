@@ -4,7 +4,6 @@ require_relative( '../models/city.rb' )
 require_relative( '../models/country.rb' )
 require_relative( '../models/attraction.rb' )
 require_relative( '../models/language.rb' )
-# require_relative('controllers/lang_country_controller')
 also_reload( '../models/*' )
 
 #NEW

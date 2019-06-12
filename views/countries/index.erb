@@ -3,9 +3,10 @@
 <a href="/countries/new">Add Country</a>
 <br>
 <hr>
-<% for country in @countries %>
-  <p>I have visited
-    <a href="/countries/<%=country.id%>">
-      <%=country.name%></a>
-        <%=country.visits_to_country %> times</p>
-<% end %>
+<p>I have visited...</p>
+  <p>
+    <% for country in @countries %>
+        <a href="/countries/<%=country.id%>">
+          <%=country.name%></a>
+            <%=country.visits_to_country %> times</p>
+    <% end %>
