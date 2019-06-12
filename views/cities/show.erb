@@ -6,6 +6,8 @@
   <% @city.attractions.each do |attraction| %>
   <li><%= attraction.name%> || "<%= attraction.review %>"</li>
   <a class="click" href="/attractions/<%=attraction.id%>/edit">Edit Attraction</a>
+  <br>
+  <br>
   <% end  %>
 </ul>
 
